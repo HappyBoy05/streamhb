@@ -68,7 +68,7 @@ async def private_receive_handler(c: Client, m: Message):
         if shortlink:
             stream_link = shortlink
         online_link = Var.URL + 'download/'+ str(log_msg.message_id) 
-        hb4all = 'playit://playerv2/video?url=' + (online_link)
+        hb4all = 'playit://playerv2/video?url=' + get.(online_link)
         shortlinka = get_shortlink(online_link)
         if shortlinka:
             online_link = shortlinka
@@ -100,7 +100,7 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b> 🖥 WATCH    :</b> <i>{}</i>
 
-<b> Playit  : </b><a href=f"(hb4all)">Download</a>
+<b> Playit  : </b><a href=f"{hb4all}">Download</a>
 
 <b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  </b>
 
