@@ -63,8 +63,7 @@ async def start(b, m):
                 return
         await m.reply_text(
             text="""
-<b>I am File Stream Robot\n Send Me Any File/Video \n Get Stream/Download Link\n And Works In Channel \n Add Me Channel Put Admin With Edit Rights</b>
-<i><u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u></i>\n
+<b>I am File Stream Robot\nSend Me Any File/Video \nGet Stream/Download Link\nAnd Also Works In Channel \n Add Me Channel Put Admin With Edit Rights</b>\n
 <b>Dont Spam.</b>""",
             parse_mode="HTML",
             disable_web_page_preview=True,
