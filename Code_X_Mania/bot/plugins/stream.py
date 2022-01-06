@@ -43,7 +43,7 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="""<i>Jᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🔐</i>""",
+                text="""<i>Jᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🔐</i>""",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -57,7 +57,7 @@ async def private_receive_handler(c: Client, m: Message):
         except Exception:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ʙᴏss** @adarsh_goel",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ** @hb4all1_Bot",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -68,7 +68,6 @@ async def private_receive_handler(c: Client, m: Message):
         if shortlink:
             stream_link = shortlink
         online_link = Var.URL + 'download/'+ str(log_msg.message_id) 
-        hb4all = 'playit://playerv2/video?url=' + f"{online_link}
         shortlinka = get_shortlink(online_link)
         if shortlinka:
             online_link = shortlinka
@@ -100,15 +99,13 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b> 🖥 WATCH    :</b> <i>{}</i>
 
-<b> Playit  : </b><a href=f"{hb4all}">Download</a>
-
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  </b>
+<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  \n 🔞 Content Will Be Deleted</b>
 
 """
 
         await log_msg.reply_text(text=f"**RᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
-            text=msg_text.format(file_name, file_size, online_link, stream_link, hb4all),
+            text=msg_text.format(file_name, file_size, online_link, stream_link),
             parse_mode="HTML", 
             quote=True,
             disable_web_page_preview=True,
